@@ -15,11 +15,22 @@ header {
 }
 
 .headshot {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid #fff;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Indicates you can interact with the image */
 }
+
+.headshot.hovered {
+    transform: scale(1.1); /* Slightly enlarges the headshot on hover */
+}
+
+#name {
+    transition: color 0.3s ease;
+}
+
+#name.highlight {
+    color: #007BFF; /* Changes color on hover */
+}
+
 
 section {
     background: #fff;
