@@ -67,3 +67,43 @@ li {
     margin-bottom: 10px;
 }
 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px; /* Adds space between project boxes */
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* Makes two projects fit in one row with space */
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Slight raise effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    color: #333;
+}
+
+.project p {
+    color: #666;
+}
+
+.project a {
+    text-decoration: none;
+    color: #00aaff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #0077cc;
+}
