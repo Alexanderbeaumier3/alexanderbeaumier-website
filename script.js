@@ -1,4 +1,14 @@
-// Example of future enhancement: dynamic content loading or interaction
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Resume loaded and ready.");
+    const headshot = document.querySelector('.headshot');
+    const name = document.getElementById('name');
+
+    headshot.addEventListener('mouseenter', function() {
+        headshot.classList.add('hovered');
+        name.classList.add('highlight');
+    });
+
+    headshot.addEventListener('mouseleave', function() {
+        headshot.classList.remove('hovered');
+        name.classList.remove('highlight');
+    });
 });
