@@ -7,6 +7,13 @@ body {
     color: #333;
 }
 
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: #fff;
+    --main-color: #00ffee;
+}
+
 header {
     background: #333;
     color: #fff;
@@ -15,20 +22,23 @@ header {
 }
 
 .headshot {
-    transition: transform 0.3s ease;
-    cursor: pointer; /* Indicates you can interact with the image */
+    border-radius: 50%;
 }
 
-.headshot.hovered {
-    transform: scale(1.1); /* Slightly enlarges the headshot on hover */
+.headshot {
+    position: relative;
+    top: 3rem;
+    width: 12vw;
+    border-radius: 65%;
+    box-shadow: 0 0 25px var(--main-color); 
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
 
-#name {
-    transition: color 0.3s ease;
-}
-
-#name.highlight {
-    color: #007BFF; /* Changes color on hover */
+.headshot:hover{
+    box-shadow: 0 0 25px var(--main-color), 
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
 }
 
 
