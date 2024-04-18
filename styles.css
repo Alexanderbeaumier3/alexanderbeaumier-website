@@ -24,9 +24,9 @@ header {
 
 .headshot {
     position: absolute;
-    right: 20px; /* Positions to the right of the header */
+    left: 600px; /* Positions to the right of the header */
     top: 50%;
-    transform: translateY(-50%); /* Centers the image vertically */
+    transform: translatey(-50%); /* Centers the image vertically */
     width: 100px; /* Adjust size as needed or keep it responsive */
     height: 100px; /* Ensures the image is circular */
     border-radius: 50%; /* Makes the image perfectly circular */
