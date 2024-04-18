@@ -15,35 +15,35 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: var(--second-bg-color); /* Updated to use your root variable */
+    color: var(--text-color); /* Updated to use your root variable */
     padding: 20px 0;
     text-align: center;
+    position: relative; /* Added to position the headshot absolutely within the header */
 }
 
 .headshot {
-    border-radius: 50%;
-}
-
-.headshot {
-    position: relative;
-    top: 3rem;
-    width: 12vw;
-    border-radius: 65%;
-    box-shadow: 0 0 25px var(--main-color); 
+    position: absolute;
+    right: 20px; /* Positions to the right of the header */
+    top: 50%;
+    transform: translateY(-50%); /* Centers the image vertically */
+    width: 100px; /* Adjust size as needed or keep it responsive */
+    height: 100px; /* Ensures the image is circular */
+    border-radius: 50%; /* Makes the image perfectly circular */
+    box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
-    transition: 0.4s ease-in-out;
+    transition: box-shadow 0.4s ease-in-out;
 }
 
-.headshot:hover{
+.headshot:hover {
     box-shadow: 0 0 25px var(--main-color), 
-    0 0 50px var(--main-color),
-    0 0 100px var(--main-color);
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
 }
-
 
 section {
-    background: #fff;
+    background: var(--bg-color);
+    color: var(--text-color);
     margin: 20px;
     padding: 20px;
     border-radius: 8px;
@@ -66,3 +66,4 @@ ul {
 li {
     margin-bottom: 10px;
 }
+
