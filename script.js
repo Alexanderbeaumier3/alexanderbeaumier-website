@@ -14,23 +14,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Example: Dynamically add projects if needed
+    const form = document.getElementById('project-form');
     const projectsContainer = document.querySelector('.projects-container');
 
-    // Imagine you fetch these details from an API or your database
-    const projects = [
-        { title: 'Dynamic Project 1', description: 'This is a dynamically added project.', githubLink: 'https://github.com/yourusername/dynamicproject1' },
-        { title: 'Dynamic Project 2', description: 'This project is also added dynamically.', githubLink: 'https://github.com/yourusername/dynamicproject2' }
-    ];
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-    projects.forEach(project => {
+        const title = document.getElementById('project-title').value;
+        const description = document.getElementById('project-description').value;
+        const link = document.getElementById('project-link').value;
+
         const projectDiv = document.createElement('div');
         projectDiv.className = 'project';
         projectDiv.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <a href="${project.githubLink}" target="_blank">View on GitHub</a>
+            <h3>${title}</h3>
+            <p>${description}</p>
+            <a href="${link}" target="_blank">View on GitHub</a>
         `;
         projectsContainer.appendChild(projectDiv);
+
+        // Clear form fields after submission
+        document.getElementById('project-title').value = '';
+        document.getElementById('project-description').value = '';
+        document.getElementById('project-link').value = '';
     });
 });
+
