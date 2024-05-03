@@ -24,7 +24,7 @@ header {
 
 .headshot {
     position: absolute;
-    left: 600px; /* Positions to the right of the header */
+    left: 300px; /* Positions to the right of the header */
     top: 50%;
     transform: translatey(-50%); /* Centers the image vertically */
     width: 100px; /* Adjust size as needed or keep it responsive */
@@ -108,31 +108,6 @@ li {
     color: #0077cc;
 }
 
-#project-form {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#project-form input, #project-form textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#project-form button {
-    padding: 10px;
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#project-form button:hover {
-    background-color: #0077cc;
-}
 
 .projects-container {
     display: flex;
@@ -153,4 +128,28 @@ li {
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .headshot {
+        position: static;
+        display: block;
+        margin: 0 auto;
+        transform: none
+    }
+
+    .projects-container {
+        padding: 0;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
+
+/* Added a media query for smaller screens */
+@media (max-width: 480px) {
+    header {
+        text-align: center;
+    }
 }
